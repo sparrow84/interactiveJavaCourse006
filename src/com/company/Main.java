@@ -42,7 +42,7 @@ public class Main {
 //        JPanel contents = new JPanel(new VerticalLayout());
 
 
-        GUI1 gui1 = new GUI1();
+        GUI gui1 = new GUI();
 
     }
 
