@@ -39,7 +39,8 @@ public class GUI extends JFrame {
         JButton bMinus = new JButton("-");
         JButton bDivision = new JButton("/");
         JButton bMultilplication = new JButton("*");
-        JButton bSquaring = new JButton("x²");
+//        JButton bSquaring = new JButton("x²");ⁿ
+        JButton bSquaring = new JButton("xⁿ");
         JButton bC = new JButton("C");
         JButton bResult = new JButton("=");
         JButton b12 = new JButton("");
@@ -180,12 +181,19 @@ public class GUI extends JFrame {
             }
         });
 
+//        bSquaring.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                Logic.getExpresoinPart(bSquaring.getText());
+//                textField.setText(Double.toString(Logic.getRes()));
+//                Logic.resetAll();
+//            }
+//        });
+
         bSquaring.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Logic.getExpresoinPart(bSquaring.getText());
-                textField.setText(Double.toString(Logic.getRes()));
-                Logic.resetAll();
             }
         });
 

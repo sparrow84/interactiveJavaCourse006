@@ -31,11 +31,11 @@ public class Logic {
                 x = Double.parseDouble(stringBuffer.toString());
                 stringBuffer.setLength(0);
                 sign = sumbol;
-                if (sumbol.equals("x²")) {
-                    calc();
-/**/                    System.out.println("Result = " + res + "   x = " + x + "   y = " + y);
-//                    resetAll();
-                }
+//                if (sumbol.equals("x²")) {
+//                if (sumbol.equals("xⁿ")) {
+//                    calc();
+//                    System.out.println("Result = " + res + "   x = " + x + "   y = " + y);
+//                }
             }
         } else {
             if (m.matches()) {
@@ -43,8 +43,7 @@ public class Logic {
             } else if (sumbol.equals("=")) {
                 y = Double.parseDouble(stringBuffer.toString());
                 calc();
-/**/                System.out.println("Result = " + res + "   x = " + x + "   y = " + y);
-//                resetAll();
+                System.out.println("Result = " + res + "   x = " + x + "   y = " + y);
             }
         }
     }
@@ -64,8 +63,8 @@ public class Logic {
             case "/":
                 res = x / y;
                 break;
-            case "x²":
-                res = x * x;
+            case "xⁿ":
+                res = Math.pow(x,y);
                 break;
             default:
                 System.err.println("Не тот знак: " + sign);
